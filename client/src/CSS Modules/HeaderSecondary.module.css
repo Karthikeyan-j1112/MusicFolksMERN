@@ -1,0 +1,15 @@
+.header{
+    height: 90px;        
+    border-bottom-style: solid;
+    border-width: 0.5px;
+    border-color: rgb(217, 217, 217);
+    background-color: white;        
+}
+
+.logo{
+    height: 80px;
+    margin-top: 5px;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+

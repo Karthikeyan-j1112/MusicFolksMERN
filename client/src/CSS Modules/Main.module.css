@@ -1,0 +1,25 @@
+.main{
+    display: flex;
+}
+.navbar {    
+    width: 250px;
+    background-color: black;
+    color: white;
+    height: calc(100vh - 70px);
+    text-align: left;    
+}
+.right{
+    width: calc(100% - 250px) ;
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#222222,#121212);
+}
+
+.view{
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: left;    
+    height: calc(100vh - 135px);    
+}
+

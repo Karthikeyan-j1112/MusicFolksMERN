@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Poppins&display=swap');
+
+.log_form {
+    width: 350px;
+    padding: 25px;
+    padding-bottom: 10px;
+    margin: auto;
+    margin-top: 30px;    
+    font-size: 13.5px;
+    background-color: white;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+    font-family: 'Poppins';
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+}
+
+.input {
+    height: 35px;
+    width: 86.5%;
+    margin-top: 7px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #f1f1f1;
+    padding-left: 10px;
+    padding-right: 34px;
+    margin-bottom: 15px;    
+}
+
+.error_input{
+    height: 35px;
+    width: 86.5%;
+    margin-top: 7px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #e7195a;
+    padding-left: 10px;
+    padding-right: 34px;
+    margin-bottom: 15px;  
+}
+
+.date{
+    height: 35px;
+    width: 86.5%;
+    margin-top: 7px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #f1f1f1;
+    padding-left: 10px;
+    padding-right: 34px;
+    margin-bottom: 15px;    
+}
+
+.error_date{
+    height: 35px;
+    width: 86.5%;
+    margin-top: 7px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #e7195a;
+    padding-left: 10px;
+    padding-right: 34px;
+    margin-bottom: 15px;  
+}
+
+.label {
+    font-size: 15px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.button {
+    width: 120px;
+    height: 35px;
+    border-radius: 25px;
+    border-style: none;
+    background-color: greenyellow;
+    font-size: 13.5px;
+    font-weight: 750;
+    transition: 0.1s;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    width: 125px;
+    height: 40px;
+    border-radius: 27.5px;
+    font-size: 14px;
+    font-weight: 780;
+    margin-top: 7.5px;
+    margin-bottom: -2.5px;
+}
+
+.btn_container {
+    text-align: center;    
+    margin-bottom: 15px;
+}
+
+.passwordIcon {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 320px;
+    font-size: 18px;
+}
+
+.error {
+    padding: 10px;
+    background: #ffefef;
+    border: 1px solid #e7195a;
+    color: #e7195a;
+    border-radius: 4px;
+    margin: 0px 0px 10px 0px;
+}
+
