@@ -26,8 +26,7 @@ const getRecent = async (req, res) => {
     }
 }
 
-const getSongLinks = async (req, res) => {
-    console.log(req);
+const getSongLinks = async (req, res) => {    
     try {
         const song = await Song.findById(req.body._id)
         let song_image;
