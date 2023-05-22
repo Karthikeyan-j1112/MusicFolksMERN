@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const userSongsSchema = new mongoose.Schema({
-    username: {
+    userId: {
         type: mongoose.mongo.ObjectId,
         required: true,
         unique: true
@@ -36,8 +36,8 @@ const userSongsSchema = new mongoose.Schema({
     }
 }, { collection: 'user_songs' })
 
-userSongsSchema.statics.createUser = async function (username) {
-    this.create({ username })
+userSongsSchema.statics.createUser = async function (userId) {
+    this.create({ userId })
         .then(userSongs => {
             return userSongs
         })
