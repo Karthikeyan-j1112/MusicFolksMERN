@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const userSongsSchema = new mongoose.Schema({
     username: {
-        type: String,
+        type: mongoose.mongo.ObjectId,
         required: true,
         unique: true
     },
