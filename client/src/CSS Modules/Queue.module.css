@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.queue {    
+    /* background-color: blue; */
+    padding: 10px;
+    padding-left: 40px;
+       
+}
+
+.headOne {
+    color: white;
+    font-family: 'Inter', sans-serif; 
+}
+
+.headTwo {
+    color: grey;
+    font-family: 'Lato', sans-serif;
+}

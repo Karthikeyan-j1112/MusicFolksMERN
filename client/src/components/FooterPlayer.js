@@ -2,15 +2,24 @@ import React from 'react'
 import { useAuthContext } from '../hooks/useAuthContext'
 import { useAudioContext } from '../hooks/useAudioContext'
 import styles from '../CSS Modules/footer.module.css'
-import { Link } from 'react-router-dom'
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useUserSongsContext } from '../hooks/useUserSongsContext'
 import { VscHeart, VscHeartFilled } from 'react-icons/vsc'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBackwardStep, faCirclePause, faCirclePlay, faForwardStep, faShuffle, faVolumeHigh, faVolumeLow, faVolumeOff, faVolumeXmark } from '@fortawesome/free-solid-svg-icons'
 import { TbRepeat, TbRepeatOnce } from 'react-icons/tb'
-import { HiOutlineQueueList } from 'react-icons/hi2'
+import { HiOutlineQueueList, HiQueueList } from 'react-icons/hi2'
 
 export const FooterPlayer = () => {
+
+    const navLinkStyle = ({ isActive }) => {
+        return ({
+            color: (isActive) ? '#1fdf64' : 'white'
+        })
+    }
+
+    const location = useLocation()
+    const navigate = useNavigate()
     const { user } = useAuthContext()
     const { random, setRandom,
         repeat, dispatchRepeat,
@@ -182,7 +191,12 @@ export const FooterPlayer = () => {
                     </div>
                 </div>
                 <div className={styles.side} >
-                    <HiOutlineQueueList className={styles.queue} size='20px' />
+                    {
+                        location.pathname !== '/queue' ?
+                            <HiOutlineQueueList className={styles.queue} size='20px' onClick={() => navigate('/queue')} />
+                            : <HiQueueList className={styles.queue} color='#1fdf64' size='20.2px' onClick={() => navigate(-1, { replace: true })} />
+                    }
+
                     <div className={styles.volumeIContainer} >
                         <FontAwesomeIcon
                             onClick={() => {

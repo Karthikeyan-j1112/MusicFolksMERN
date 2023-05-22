@@ -23,6 +23,17 @@ const setQueue = async (req, res) => {
     }
 }
 
+const getQueue = async (req,res) =>{
+    try {
+        
+        const queue = await UserSongs.findOne({ username: req.user.username },{})
+
+    } catch (error) {
+        console.log(error);
+        res.status(400).json(error)
+    }
+}
+
 module.exports = {
     getUserSongs,
     setQueue    

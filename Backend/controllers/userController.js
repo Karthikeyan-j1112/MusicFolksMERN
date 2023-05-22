@@ -1,4 +1,5 @@
 const User = require('../models/userModel')
+const UserSongs = require('../models/userSongsModel')
 const jwt = require('jsonwebtoken')
 
 const createToken = (_id) => {
@@ -26,7 +27,7 @@ const signupUser = async (req, res) => {
     const { username, password, name, dob, security_ques, security_ans } = req.body
     try {
         const user = await User.signup(username, password, name, dob, security_ques, security_ans)
-        const userSongs = await UserSongs.createUser(username)
+        const userSongs = await UserSongs.createUser(user._id)
         const token = createToken(user._id)
         res.json({ name, token })
 

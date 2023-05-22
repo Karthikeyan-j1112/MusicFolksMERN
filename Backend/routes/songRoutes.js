@@ -1,6 +1,6 @@
 const express = require('express');
 const { getRecent, getSongLinks } = require('../controllers/songController');
-const VerifyToken = require('../controllers/verifyToken');
+const VerifyToken = require('../middlewares/verifyToken');
 const router = express.Router()
 
 router.get('/recent',getRecent)
