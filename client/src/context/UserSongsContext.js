@@ -86,14 +86,12 @@ export const UserSongsContextProvider = ({ children }) => {
                     queue: queue
                 }
             }).then(response => {
-                console.log(response);
+                console.log('Queue Updated');
             }).catch(err => {
                 console.log(err);
             })
         }
-    }, [queue])
-
-    console.log(queue);
+    }, [queue])   
 
     return (
         <UserSongsContext.Provider value={{
