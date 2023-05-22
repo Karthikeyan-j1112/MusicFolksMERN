@@ -113,7 +113,7 @@ export const AudioContextProvider = ({ children }) => {
                 if (localQueue[localNowPlaying]) {
                     try {
                         const details = await axios({
-                            method: 'post',
+                            method: 'get',
                             url: process.env.REACT_APP_API_URL + `/api/songs/getlink`,
                             headers: {
                                 Authorization: `Bearer ${user.token}`
