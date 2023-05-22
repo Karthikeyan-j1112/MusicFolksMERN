@@ -2,7 +2,7 @@ const UserSongs = require('../models/userSongsModel')
 
 const getUserSongs = async (req, res) => {
     try {
-        const userSongs = await UserSongs.findOne({ userId: req.user._id })
+        const userSongs = await UserSongs.findOne({ userId: req.user })
         res.json({ userSongs })
     } catch (error) {
         res.status(400).json(error);
@@ -11,9 +11,10 @@ const getUserSongs = async (req, res) => {
 
 const setQueue = async (req, res) => {    
     try {
-        await UserSongs.updateOne({ userId: req.user._id }, { $set: { queue: req.body.queue } })
+        
+        await UserSongs.updateOne({ userId: req.user }, { $set: { queue: req.body.queue } })
 
-        const result = await UserSongs.findOne({ userId: req.user._id })
+        const result = await UserSongs.findOne({ userId: req.user })
 
         res.json(result.queue)
 
