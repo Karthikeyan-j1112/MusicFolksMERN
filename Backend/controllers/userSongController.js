@@ -11,7 +11,7 @@ const getUserSongs = async (req, res) => {
 
 const setQueue = async (req, res) => {    
     try {
-        await UserSongs.updateOne({ username: req.user._id }, { $set: { queue: req.body.queue } })
+        await UserSongs.updateOne({ userId: req.user._id }, { $set: { queue: req.body.queue } })
 
         const result = await UserSongs.findOne({ username: req.user.username })
 
@@ -26,7 +26,7 @@ const setQueue = async (req, res) => {
 const getQueue = async (req,res) =>{
     try {
         
-        const queue = await UserSongs.findOne({ username: req.user._id },{})
+        const queue = await UserSongs.findOne({ userId: req.user._id },{})
 
     } catch (error) {
         console.log(error);
