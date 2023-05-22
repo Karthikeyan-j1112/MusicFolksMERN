@@ -6,6 +6,6 @@ const router = express.Router()
 router.get('/recent',getRecent)
 
 router.use(VerifyToken)
-router.get('/getlink',getSongLinks)
+router.post('/getlink',getSongLinks)
 
 module.exports = router
